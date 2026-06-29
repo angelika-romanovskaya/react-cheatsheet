@@ -10,7 +10,7 @@ const NavigationLinks = () => {
 		<Menu
 			style={{ padding: "16px 0" }}
 			mode="inline"
-			selectedKeys={[location.pathname]}
+			selectedKeys={[location.pathname.split("/")[2]]}
 			items={topics.map((topic) => ({
 				key: topic.path,
 				label: topic.title,

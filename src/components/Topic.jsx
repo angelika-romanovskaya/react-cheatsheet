@@ -1,12 +1,7 @@
 import { Fragment, useEffect, useContext } from "react";
-import Prism from "prismjs";
 import NavigationButtons from "./NavigationButtons";
-import { Context } from "./ThemeContext";
-import "prismjs/themes/prism-tomorrow.css";
 
 const Topic = ({ title, content = [] }) => {
-	const { theme } = useContext(Context);
-
 	const parseContent = (content) => {
 		return content.map((item) => {
 			const [[tag, text]] = Object.entries(item);
@@ -51,7 +46,7 @@ const Topic = ({ title, content = [] }) => {
 	};
 
 	return (
-		<div className={`topic ${theme}`}>
+		<div>
 			<h1>{title}</h1>
 			<div
 				style={{

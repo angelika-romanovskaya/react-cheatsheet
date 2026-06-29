@@ -37,7 +37,11 @@ const NavigationButtons = ({ title }) => {
 			)}
 
 			{next && (
-				<Button type="primary" icon={<ArrowRightOutlined />} iconPosition="end">
+				<Button
+					type="primary"
+					icon={<ArrowRightOutlined />}
+					iconPlacement="end"
+				>
 					<Link to={`/topic/${next.path}`}>{next.title}</Link>
 				</Button>
 			)}
